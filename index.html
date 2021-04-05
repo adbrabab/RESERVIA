@@ -1,52 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
+
     <head>
         <meta charset="UTF-8" />
         <title>Reservia</title>
-        <link rel="stylesheet" href="./styles.css"></link>
+        <link rel="stylesheet" href="./styles.css" />
     </head>
 
     <body>
 
         <header>
-            <div id="titre_principal">
-                <div id="logo">
-                    <img src="Reservia_logo.png">
+            <nav>
+                <img src="logo.png" alt="Logo Reservia" />
+                <ul>
+                    <li><a href="#hebergement">Hébergements</a></li>
+                    <li><a href="#activites">Activités</a></li>
+                    <li><a href="#">S'inscrire</a></li>
+                </ul>
+            </nav>
+            <section>
+                <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+                <p>En plein centre ville ou en pleine nature</p>
+                <div>
+                    <img src="todo" alt="Icône de localisation" />
+                    <input type="text" />
+                    <button>Rechercher</button>
                 </div>
-
-                <nav>
+                <div>
+                    <h3>Filtres</h3>
                     <ul>
-                        <li><a href="#">Hébergements</a></li>
-                        <li><a href="#">Activités</a></li>
-                        <li><a href="#">S'inscrire</a></li>
+                        <li><button><span>TODO icône</span>Économique</button></li>
+                        <li><button><span>TODO icône</span>Familial</button></li>
+                        <li><button><span>TODO icône</span>Romantique</button></li>
+                        <li><button><span>TODO icône</span>Animaux autorisés</button></li>
                     </ul>
-
-                    <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
-                    <p>En plein centre ville ou en pleine nature</p>
-                </nav>
-            </div>
+                </div>
+                <div>
+                    <img src="todo" alt="Icône information" />
+                    <p>Plus de 500 logements sont disponibles dans cette ville</p>
+                </div>
+            </section>
         </header>
 
         <main>
+            <article id="hebergement">
+                <h2>Hébergements à Marseille</h2>
+                <section>
+                    <img src="todo" alt="Image de l'hébergement" />
+                    <h3>Auberge la Cannebière</h3>
+                    <p>Nuit à partir de 25€</p>
+                    <div>TODO étoile</div>
+                </section>
+                <footer>
+                    <a href="#">Afficher plus</a>
+                </footer>
+            </article>
 
+            <article>
+                <header>
+                    <h2>Les plus populaires</h2>
+                    <div>TODO icône</div>
+                </header>
+                <section>
+                    <img src="todo" alt="Image de l'hébergement" />
+                    <h3>Hôtel Le soleil du matin</h3>
+                    <p>Nuit à partir de 128€</p>
+                    <div>TODO étoile</div>
+                </section>
+            </article>
+
+            <article id="activites">
+                <h2>Activités à Marseille</h2>
+                <section>
+                    <img src="todo" alt="Image du lieu d'activité" />
+                    <h3>Vieux Port</h3>
+                </section>
+            </article>
         </main>
 
         <footer>
-            <div id="à propos"></div>
-
-            <h3> A propos </h3>
-
-
-            <li><a href="#">Fonctionnement du site</a></li>
-            <li><a href="#">Conditions générales de vente</a></li>
-            <li><a href="#">Données et confidentialité </a></li>
+            <section>
+                <h3>A propos</h3>
+                <ul>
+                    <li><a href="#">Fonctionnement du site</a></li>
+                    <li><a href="#">Conditions générales de vente</a></li>
+                    <li><a href="#">Données et confidentialité</a></li>
+                </ul>
+            </section>
+            <section>
+                <h3>Nos hébergements</h3>
+                <ul>
+                    <li><a href="#">Charte qualité</a></li>
+                    <li><a href="#">Soumettre votre hôtel</a></li>
+                </ul>
+            </section>
+            <section>
+                <h3>Assistance</h3>
+                <ul>
+                    <li><a href="#">Centre d'aide</a></li>
+                    <li><a href="mailto:contact@reservia.com">Nous contacter</a></li>
+                </ul>
+            </section>
         </footer>
-
 
     </body>
 
 </html>
-
-
-
-
