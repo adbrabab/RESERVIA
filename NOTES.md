@@ -11,14 +11,40 @@ Utiliser dès que possible les [éléments sémantique HTML listés ici](https:/
 - La frontière entre `article` et `section` peut-être assez fine. Il faut utiliser l'élément article lorsque son contenu peut vivre en tout autonomie sans être lié à d'autres contenus dans la page: un élément article peut contenir en son sein un header/footer, titre de section (h1...)... L'élement section définit un groupe thématique de contenu avec typiquement un titre de section (définie via `hX`).  Pour plus de détails, voir le forum [Stackoverflow](https://stackoverflow.com/questions/7549561/section-vs-article-html5) ainsi que la charte décisionnelle ci-dessous.
 - Différence entre le containeur `header` et les titres de section `hX`: hX (par exemple h1) n'autorise que des éléments textuels et permet de structurer la page en définissant un titre au section. Mais si l'on souhaite utiliser une en-tête plus riche avec des logos, des notes complémentaires (description...), il faut utiliser le container `header`: il est important de noter que l'élément header ne permet pas de délimiter une section dans le document (il n'introduit donc pas de nouvelle section dans la structure). Pour délimiter une section avec l'usage de l'élément `header`, il est nécessaire d'avoir un titre de section avec un élément h1-h6 au sein du header.
 - Charte décisionnelle pour choisir le bon élément sémantique:
-<img src="https://i.stack.imgur.com/8Ruyj.png" />
+![](https://i.stack.imgur.com/8Ruyj.png)
 
 ### Elément img
 
 - L'attribut `alt` est nécessaire pour décrire une image dans le cas où elle ne peut pas être chargée. Cela permet de donner à l'utilisateur un descriptif textuel de ce que représenterait l'image. Pour plus de détails, voir [ce lien](https://developer.mozilla.org/fr/docs/Web/HTML/Element/Img#attributs) ou encore [celui-ci](https://developer.mozilla.org/fr/docs/Web/HTML/Element/Img#accessibilit%C3%A9).
 
-
 ## CSS
+
+### Comment remettre à zéro le CSS avant d'itérer sur le style de notre application?
+
+Le reset CSS est une technique qui consiste à réinitialiser à 0 la valeur de certains éléments HTML afin d'éviter une partie des différences d'affichage sur les divers navigateurs. En effet, les navigateur internet appliquent un style par défault aux élément HTML. 
+Par exemple, on peut s'amuser à enlever l'espacement externe aux éléments `hX` en appliquant la règle de remise à zéro suivant dans notre CSS:
+
+```css
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+```
+
+Les valeurs par défaut des éléments peuvent être inspectés dans une page via l'outil d'inspection et peuvent-être identifié avec la mention "user agent stylesheet" sur Google Chrome:
+
+![](./doc/useragentcss.png)
+
+### Définir une police
+
+Utiliser la propriété CSS `font-family` au sein des règles de style de l'élément `body` (pour l'appliquer à tous les éléments de la page car la valeur de la propriété est héritable).
+Par défault, certaines polices sont déjà intégrées dans le système d'exploitation (Windows, Linux...): par exemple, la police `Arial`, `monospace`... Si la police n'est pas disponible, il existe un site permettant de télécharger des polices gratuitement: https://fonts.google.com/specimen/Raleway#standard-styles.
+
+La propriété font-family permet de lister différentes familles de police, séparées par des virgules. Le navigateur internet va successivement essayer de récupérer la première police disponible en partant du début de la liste fournie. Si la première police n'est pas disponible, le navigateur va récupérer la seconde et ainsi de suite et s'arrêter au premier récupérable.
+
+### Définir un espacement interne / externe
+
+- Espacement interne: `padding` (pour définir un espacement que sur un côté: padding-left, padding-right, padding-top, padding-bottom)
+- Espacement externe: `margin` (pour définir un espacement que sur un côté: margin-left, margin-right, margin-top, margin-bottom)
 
 ## Liens utiles
 
