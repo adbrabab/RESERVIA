@@ -35,6 +35,11 @@ h3 {
     font-size: 12px;
 }
 
+p {
+    margin: 0;
+    font-size: 12px;
+}
+
 a {
     font-size: 10px;
     text-decoration: none;
@@ -52,6 +57,18 @@ a {
 
 .bg-gris {
     background-color: #F2F2F2;
+}
+
+.fg-bleu {
+    color: #0065FC;
+}
+
+.fg-bleuClair {
+    color: #DEEBFF;
+}
+
+.fg-gris {
+    color: #F2F2F2;
 }
 
 .courbure {
@@ -78,6 +95,99 @@ body > footer {
     margin-bottom: 8px;
 }
 
-#hebergement{
-    margin-top: 60px;
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 36px;
+}
+
+#hebergements {
+    flex: 2;
+}
+
+#populaires {
+    flex: 1;
+}
+
+#activites {
+    width: 100%;
+}
+
+article > :not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.blocs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.bloc {
+    width: calc(33% - 24px);
+    background-color: white;
+    border-radius: 14px;
+    padding: 3px;
+}
+
+.bloc > img {
+    width: 100%;
+    height: 70px;
+    object-fit: cover;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+}
+
+.bloc > div {
+    margin: 6px;
+}
+
+.bloc-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.bloc-content h3 {
+    margin-bottom: 3px;
+}
+
+.bloc-content p {
+    margin-bottom: 3px;
+}
+
+
+.bloc-etoiles {
+    font-size: 9px;
+}
+
+.bloc-etoiles > :not(:first-child) {
+    margin-left: -2px;
+}
+
+#populaires > header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bloc-horizontal {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 96px;
+}
+
+.bloc-horizontal > img {
+    width: 33%;
+    height: 100%;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 11px;
+}
+
+.bloc-horizontal > .bloc-content {
+    justify-content: space-between;
+    margin: 8px 12px;
 }
